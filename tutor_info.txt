@@ -2,3 +2,5 @@ Name	sex
 Joshua	M
 Evita	F
 Felix	M
+Oscar	M
+
