@@ -1,6 +1,3 @@
-Name	sex
-Joshua	M
-Evita	F
-Felix	M
-Oscar	M
+No.	Name	Sex	School	Programme_of_Study	Year	DSE_results			                StudentGrade   Subjects                 Location        Aimed_Salary		
+1	Joshua	M	HKUST	Computer_Science	Year2	Math:5**,Math(M2):5**,Phys:5**,Chem:5** 	S4,S5,S6	Math_E,M2_E,Phys_C,Chem_C	TIN_SHUI_WAI	above_$180	
 
