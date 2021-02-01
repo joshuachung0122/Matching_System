@@ -3,6 +3,7 @@
 #include "student.h"
 #include <list>
 #include <fstream>
+#include <map>
 
 using namespace std;
 enum class Sex{M,F};
@@ -195,10 +196,18 @@ void splitBy(string src, vector<string>&splitedStr,char sep){
     splitedStr.push_back(src.substr(startpos,src.size()-startpos));
 }
 
+void matchStudent(map<Student,vector<Tutor>>,const char* line,const vector<Tutor>tutors[][30][150][20]){
+    string line_s = line;
+    vector<string> data;
+    splitBy(line_s,data,'\t');
+    Student newStudent();
+}
+
 void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
     string line_s = line;
     vector<string> data;
     splitBy(line_s,data,'\t');
+
     //***convert data from string to specific types***//
     //convert sex
     Sex sex = (data[2]=="M")?Sex::M:Sex::F;
@@ -232,6 +241,8 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
             enum_grades.push_back(Grade::S5);
         else if(grades[i]=="S6")
             enum_grades.push_back(Grade::S6);
+        else
+            cout<<"Grades typed wrongly."<<endl;
     }
 
     //convert subjects
@@ -291,6 +302,8 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
             enum_subjects.push_back(Subject::ENGLIT);
         else if(subjects[i]=="VA")
             enum_subjects.push_back(Subject::VA);
+        else
+            cout<<"Subjects typed wrongly."<<endl;
     }
 
      //convert locations
@@ -560,9 +573,11 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
             enum_locations.push_back(Location::AP_LEI_CHAU);
         else if(locations[i]=="STAUNTON_VALLEY")
             enum_locations.push_back(Location::STAUNTON_VALLEY);
+        else
+            cout<<"Locations typed wrongly."<<endl;
     }
 
-    Tutor newPerson(stoi(data[0]),
+    Tutor newTutor(stoi(data[0]),
                     data[1],
                     sex,
                     data[3],
@@ -577,7 +592,7 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
     for(int i=0;i<subjects.size();++i){
         for(int j=0;j<locations.size();++j){
             for(int k=0;k<grades.size();++k)
-                tutors[(int)sex][(int)enum_subjects[i]][(int)enum_locations[j]][(int)enum_grades[k]].push_back(newPerson);
+                tutors[(int)sex][(int)enum_subjects[i]][(int)enum_locations[j]][(int)enum_grades[k]].push_back(newTutor);
         }
     }
 
@@ -588,11 +603,20 @@ int main(){
     vector<Student> students[2][30][150][20];
     ifstream ifsTutors("tutor_info.txt");
     ifstream ifsStudents("student_info.txt");
+    map<Student,vector<Tutor>> matchList;
 
-    char* line;
-    for(int i=0;!ifsTutors.eof();++i){
+    char line[1024];
+    int numTutor=0;
+    ifsTutors.getline(line,1024,'\n');
+    for(;!ifsTutors.eof();++numTutor){
         ifsTutors.getline(line,1024,'\n');
         addTutor(tutors,line); 
+    }
+
+    ifsStudents.getline(line,1024,'\n');
+    for(;!ifsStudents.eof();){
+        ifsStudents.getline(line,1024,'\n');
+        matchStudent(matchList,line,tutors);
     }
 
     return 0;

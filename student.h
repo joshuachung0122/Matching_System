@@ -7,18 +7,20 @@ using namespace std;
 
 class Student{
     private:
-        int number;
+        string number;
         string name;
-        Sex sex;
-        string school;
-        string programme;
-        string year;
-        string dseResults;
-        string studentGrade;
-        vector<Subject> subjects;
-        vector<Location> locations;
-        string aimedSalary;
+        string sex;
+        string grade;
+        string subjects;
+        string locations;
+        string fee;
 
-        
-
+    public:
+        Student(string number,
+            string name,
+            string sex,
+            string grade,
+            string subjects,
+            string locations,
+            string fee);
 };

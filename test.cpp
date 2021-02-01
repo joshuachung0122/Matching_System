@@ -1,14 +1,16 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 using namespace std;
 
 int main(){
-    enum class apple{A,B,C};
-    vector<int> hi[2][3][4];
-    vector<int> hehe(3,0);
-    hi[apple::A][2][2] = hehe;
-        
-
+    ifstream ifs("tutor_info.txt");
+    char line[1024];
+    int i=0;
+    for(;!ifs.eof();++i)
+        ifs.getline(line,1024);
+    cout<<i;
+    ifs.close();
     return 0;
 }

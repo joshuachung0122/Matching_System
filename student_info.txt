@@ -1,1 +1,1 @@
-No.	Name	Sex	Grade	Subjects	Location	Fee_Amount
+No.	Name	Sex	Grade	Subjects	Location	Fee
