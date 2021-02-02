@@ -10,6 +10,7 @@ class Student{
         string number;
         string name;
         string sex;
+        string targetTutorSex;
         string grade;
         string subjects;
         string locations;
@@ -19,8 +20,12 @@ class Student{
         Student(string number,
             string name,
             string sex,
+            string targetTutorSex,
             string grade,
             string subjects,
             string locations,
             string fee);
+
+        void print() const;
+        bool operator< (const Student& other)const;
 };

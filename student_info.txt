@@ -1,1 +1,2 @@
-No.	Name	Sex	Grade	Subjects	Location	Fee
+No.	Name	Sex	TutorSex	Grade	Subjects	Location	Fee
+1	SA	M	None	S3	Math_E    TIN_SHUI_WAI  150    

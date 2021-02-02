@@ -1,15 +1,15 @@
 #include "tutor.h"
 
-Tutor::Tutor(int number,
+Tutor::Tutor(string number,
             string name,
-            Sex sex,
+            string sex,
             string school,
             string programme,
             string year,
             string dseResults,
-            vector<Grade> studentGrade,
-            vector<Subject> subjects,
-            vector<Location> locations,
+            string studentGrade,
+            string subjects,
+            string locations,
             string aimedSalary):
                 number(number),
                 name(name),
@@ -22,3 +22,17 @@ Tutor::Tutor(int number,
                 subjects(subjects),
                 locations(locations),
                 aimedSalary(aimedSalary){}
+
+void Tutor::print()const{
+    cout<<number<<'\t'
+        <<name<<'\t'
+        <<sex<<'\t'
+        <<school<<'\t'
+        <<programme<<'\t'
+        <<year<<'\t'
+        <<dseResults<<'\t'
+        <<studentGrade<<'\t'
+        <<subjects<<'\t'
+        <<locations<<'\t'
+        <<aimedSalary<<endl;
+}

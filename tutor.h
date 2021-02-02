@@ -12,30 +12,30 @@ enum class Subject;
 
 class Tutor{
     private:
-        int number;
+        string number;
         string name;
-        Sex sex;
+        string sex;
         string school;
         string programme;
         string year;
         string dseResults;
-        vector<Grade> studentGrade;
-        vector<Subject> subjects;
-        vector<Location> locations;
+        string studentGrade;
+        string subjects;
+        string locations;
         string aimedSalary;
 
     public:
-        Tutor(int number,
+        Tutor(string number,
             string name,
-            Sex sex,
+            string sex,
             string school,
             string programme,
             string year,
             string dseResults,
-            vector<Grade> studentGrade,
-            vector<Subject> subjects,
-            vector<Location> locations,
+            string studentGrade,
+            string subjects,
+            string locations,
             string aimedSalary);
         
-
+        void print()const;
 };

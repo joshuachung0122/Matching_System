@@ -185,6 +185,362 @@ enum class Location{
     STAUNTON_VALLEY
 };
 
+void strGradeToEnumVector(vector<Grade>& enum_vec,string str,string enumType){
+    if(str=="P1")
+        enum_vec.push_back(Grade::P1);
+    else if(str=="P2")
+        enum_vec.push_back(Grade::P2);
+    else if(str=="P3")
+        enum_vec.push_back(Grade::P3);
+    else if(str=="P4")
+        enum_vec.push_back(Grade::P4);
+    else if(str=="P5")
+        enum_vec.push_back(Grade::P5);
+    else if(str=="P6")
+        enum_vec.push_back(Grade::P6);
+    else if(str=="S1")
+        enum_vec.push_back(Grade::S1);
+    else if(str=="S2")
+        enum_vec.push_back(Grade::S2);
+    else if(str=="S3")
+        enum_vec.push_back(Grade::S3);
+    else if(str=="S4")
+        enum_vec.push_back(Grade::S4);
+    else if(str=="S5")
+        enum_vec.push_back(Grade::S5);
+    else if(str=="S6")
+        enum_vec.push_back(Grade::S6);
+    else
+    {
+        cout<<"Wrong "+enumType<<endl;
+    }
+}
+void strSubjectToEnumVector(vector<Subject>& enum_vec,string str,string enumType){
+    if(str=="Chin")
+        enum_vec.push_back(Subject::CHIN);
+    else if(str=="Eng")
+        enum_vec.push_back(Subject::ENG);
+    else if(str=="Math_C")
+        enum_vec.push_back(Subject::MATH_C);
+    else if(str=="Math_E")
+        enum_vec.push_back(Subject::MATH_E);
+    else if(str=="M1")
+        enum_vec.push_back(Subject::M1);
+    else if(str=="M2")
+        enum_vec.push_back(Subject::M2);
+    else if(str=="LS_C")
+        enum_vec.push_back(Subject::LS_C);
+    else if(str=="LS_E")
+        enum_vec.push_back(Subject::LS_E);
+    else if(str=="Phys_C")
+        enum_vec.push_back(Subject::PHYS_C);
+    else if(str=="Phys_E")
+        enum_vec.push_back(Subject::PHYS_E);
+    else if(str=="Chem_C")
+        enum_vec.push_back(Subject::CHEM_C);
+    else if(str=="Chem_E")
+        enum_vec.push_back(Subject::CHEM_E);
+    else if(str=="Bio_C")
+        enum_vec.push_back(Subject::BIO_C);
+    else if(str=="Bio_E")
+        enum_vec.push_back(Subject::BIO_E);
+    else if(str=="Geog_C")
+        enum_vec.push_back(Subject::GEOG_C);
+    else if(str=="Geog_E")
+        enum_vec.push_back(Subject::GEOG_E);
+    else if(str=="C_History")
+        enum_vec.push_back(Subject::C_HISTORY);
+    else if(str=="W_History")
+        enum_vec.push_back(Subject::W_HISTORY);
+    else if(str=="ICT")
+        enum_vec.push_back(Subject::ICT);
+    else if(str=="ECON")
+        enum_vec.push_back(Subject::ECON);
+    else if(str=="BAFS")
+        enum_vec.push_back(Subject::BAFS);
+    else if(str=="Account")
+        enum_vec.push_back(Subject::ACCOUNT);
+    else if(str=="IS")
+        enum_vec.push_back(Subject::IS);
+    else if(str=="ChinLit")
+        enum_vec.push_back(Subject::CHINLIT);
+    else if(str=="EngLit")
+        enum_vec.push_back(Subject::ENGLIT);
+    else if(str=="VA")
+        enum_vec.push_back(Subject::VA);
+    else
+    {
+        cout<<"Wrong "+enumType<<endl;
+    }
+}
+void strLocationToEnumVector(vector<Location>& enum_vec,string str,string enumType){
+    if(str=="SHEUNG_SHUI")
+        enum_vec.push_back(Location::SHEUNG_SHUI);
+    else if(str=="YUEN_LONG")
+        enum_vec.push_back(Location::YUEN_LONG);
+    else if(str=="SIU_HONG")
+        enum_vec.push_back(Location::SIU_HONG);
+    else if(str=="LAMMA_ISLAND")
+        enum_vec.push_back(Location::LAMMA_ISLAND);
+    else if(str=="HANG_HAU")
+        enum_vec.push_back(Location::HANG_HAU);
+    else if(str=="PENG_CHAU")
+        enum_vec.push_back(Location::PENG_CHAU);
+    else if(str=="TAI_WAI")
+        enum_vec.push_back(Location::TAI_WAI);
+    else if(str=="TAI_PO")
+        enum_vec.push_back(Location::TAI_PO);
+    else if(str=="LANTAU_ISLAND")
+        enum_vec.push_back(Location::LANTAU_ISLAND);
+    else if(str=="TAI_SHUI_HANG")
+        enum_vec.push_back(Location::TAI_SHUI_HANG);
+    else if(str=="TAI_WO_HAU")
+        enum_vec.push_back(Location::TAI_WO_HAU);
+    else if(str=="TIN_SHUI_WAI")
+        enum_vec.push_back(Location::TIN_SHUI_WAI);
+    else if(str=="TAI_WO")
+        enum_vec.push_back(Location::TAI_WO);
+    else if(str=="PO_LAM")
+        enum_vec.push_back(Location::PO_LAM);
+    else if(str=="TSEUNG_KWAN_O")
+        enum_vec.push_back(Location::TSEUNG_KWAN_O);
+    else if(str=="SIU_LEK_YUEN")
+        enum_vec.push_back(Location::SIU_LEK_YUEN);
+    else if(str=="TUEN_MUN")
+        enum_vec.push_back(Location::TUEN_MUN);
+    else if(str=="LOHAS_PARK")
+        enum_vec.push_back(Location::LOHAS_PARK);
+    else if(str=="HENG_ON")
+        enum_vec.push_back(Location::HENG_ON);
+    else if(str=="DISCOVERY_BAY")
+        enum_vec.push_back(Location::DISCOVERY_BAY);
+    else if(str=="TAK_KU_LING")
+        enum_vec.push_back(Location::TAK_KU_LING);
+    else if(str=="LONG_PING")
+        enum_vec.push_back(Location::LONG_PING);
+    else if(str=="TUNG_CHUNG")
+        enum_vec.push_back(Location::TUNG_CHUNG);
+    else if(str=="LEI_MUK_SHUE")
+        enum_vec.push_back(Location::LEI_MUK_SHUE);
+    else if(str=="SUNNY_BAY")
+        enum_vec.push_back(Location::SUNNY_BAY);
+    else if(str=="SHA_TIN")
+        enum_vec.push_back(Location::SHA_TIN);
+    else if(str=="SHA_TIN_WAI")
+        enum_vec.push_back(Location::SHA_TIN_WAI);
+    else if(str=="SHA_TAU_KOK")
+        enum_vec.push_back(Location::SHA_TAU_KOK);
+    else if(str=="YAU_TONG")
+        enum_vec.push_back(Location::YAU_TONG);
+    else if(str=="HUNG_SHUI_KIU")
+        enum_vec.push_back(Location::HUNG_SHUI_KIU);
+    else if(str=="SHAM_TSENG")
+        enum_vec.push_back(Location::SHAM_TSENG);
+    else if(str=="CLEAR_WATER_BAY")
+        enum_vec.push_back(Location::CLEAR_WATER_BAY);
+    else if(str=="FO_TAN")
+        enum_vec.push_back(Location::FO_TAN);
+    else if(str=="WU_KAI_SHA")
+        enum_vec.push_back(Location::WU_KAI_SHA);
+    else if(str=="SHEK_LEI")
+        enum_vec.push_back(Location::SHEK_LEI);
+    else if(str=="SHEK_YAM")
+        enum_vec.push_back(Location::SHEK_YAM);
+    else if(str=="WO_CHE")
+        enum_vec.push_back(Location::WO_CHE);
+    else if(str=="CITY_ONE")
+        enum_vec.push_back(Location::CITY_ONE);
+    else if(str=="FANLING")
+        enum_vec.push_back(Location::FANLING);
+    else if(str=="TSUEN_WAN")
+        enum_vec.push_back(Location::TSUEN_WAN);
+    else if(str=="LAI_KING")
+        enum_vec.push_back(Location::LAI_KING);
+    else if(str=="KWAI_CHUNG")
+        enum_vec.push_back(Location::KWAI_CHUNG);
+    else if(str=="KWAI_SHING")
+        enum_vec.push_back(Location::KWAI_SHING);
+    else if(str=="KWAI_HING")
+        enum_vec.push_back(Location::KWAI_HING);
+    else if(str=="KWAI_FONG")
+        enum_vec.push_back(Location::KWAI_FONG);
+    else if(str=="LAM_TIN")
+        enum_vec.push_back(Location::LAM_TIN);
+    else if(str=="SAI_KUNG")
+        enum_vec.push_back(Location::SAI_KUNG);
+    else if(str=="TIU_KING_LING")
+        enum_vec.push_back(Location::TIU_KING_LING);
+    else if(str=="CHE_KUNG_MIU")
+        enum_vec.push_back(Location::CHE_KUNG_MIU);
+    else if(str=="KAM_SHEUNG_ROAD")
+        enum_vec.push_back(Location::KAM_SHEUNG_ROAD);
+    else if(str=="CHEUNG_CHAU")
+        enum_vec.push_back(Location::CHEUNG_CHAU);
+    else if(str=="TSING_YI")
+        enum_vec.push_back(Location::TSING_YI);
+    else if(str=="TSING_LUNG_TAU")
+        enum_vec.push_back(Location::TSING_LUNG_TAU);
+    else if(str=="HIN_KENG")
+        enum_vec.push_back(Location::HIN_KENG);
+    else if(str=="MA_LIU_SHUI")
+        enum_vec.push_back(Location::MA_LIU_SHUI);
+    else if(str=="MA_WAN")
+        enum_vec.push_back(Location::MA_WAN);
+    else if(str=="MA_ON_SHAN")
+        enum_vec.push_back(Location::MA_ON_SHAN);
+    else if(str=="KOWLOON_CITY")
+        enum_vec.push_back(Location::KOWLOON_CITY);
+    else if(str=="KOWLOON_TONG")
+        enum_vec.push_back(Location::KOWLOON_TONG);
+    else if(str=="KOWLOON_BAY")
+        enum_vec.push_back(Location::KOWLOON_BAY);
+    else if(str=="JORDAN")
+        enum_vec.push_back(Location::JORDAN);
+    else if(str=="HO_MAN_TIN")
+        enum_vec.push_back(Location::HO_MAN_TIN);
+    else if(str=="NAM_CHEONG")
+        enum_vec.push_back(Location::NAM_CHEONG);
+    else if(str=="YAU_YAT_TSUEN")
+        enum_vec.push_back(Location::YAU_YAT_TSUEN);
+    else if(str=="KAI_TAK")
+        enum_vec.push_back(Location::KAI_TAK);
+    else if(str=="TO_KWA_WAN")
+        enum_vec.push_back(Location::TO_KWA_WAN);
+    else if(str=="TAI_WO_PING")
+        enum_vec.push_back(Location::TAI_WO_PING);
+    else if(str=="TAI_KOK_TSUI")
+        enum_vec.push_back(Location::TAI_KOK_TSUI);
+    else if(str=="PRINCE_EDWARD")
+        enum_vec.push_back(Location::PRINCE_EDWARD);
+    else if(str=="OLYMPIC")
+        enum_vec.push_back(Location::OLYMPIC);
+    else if(str=="TSIM_SHA_TSUI")
+        enum_vec.push_back(Location::TSIM_SHA_TSUI);
+    else if(str=="CHOI_HUNG")
+        enum_vec.push_back(Location::CHOI_HUNG);
+    else if(str=="TSZ_WAN_SHAN")
+        enum_vec.push_back(Location::TSZ_WAN_SHAN);
+    else if(str=="HAMMER_HILL")
+        enum_vec.push_back(Location::HAMMER_HILL);
+    else if(str=="SAN_PO_KONG")
+        enum_vec.push_back(Location::SAN_PO_KONG);
+    else if(str=="MONG_KOK")
+        enum_vec.push_back(Location::MONG_KOK);
+    else if(str=="AUSTIN")
+        enum_vec.push_back(Location::AUSTIN);
+    else if(str=="LOK_FU")
+        enum_vec.push_back(Location::LOK_FU);
+    else if(str=="WANG_TAU_HOM")
+        enum_vec.push_back(Location::WANG_TAU_HOM);
+    else if(str=="YAU_MA_TEI")
+        enum_vec.push_back(Location::YAU_MA_TEI);
+    else if(str=="SHAM_SHUI_PO")
+        enum_vec.push_back(Location::SHAM_SHUI_PO);
+    else if(str=="NGAU_CHI_WAN")
+        enum_vec.push_back(Location::NGAU_CHI_WAN);
+    else if(str=="NGAU_TAU_KOK")
+        enum_vec.push_back(Location::NGAU_TAU_KOK);
+    else if(str=="SHEK_KIP_MEI")
+        enum_vec.push_back(Location::SHEK_KIP_MEI);
+    else if(str=="SAU_MAU_PING")
+        enum_vec.push_back(Location::SAU_MAU_PING);
+    else if(str=="CHUK_YUEN")
+        enum_vec.push_back(Location::CHUK_YUEN);
+    else if(str=="HUNG_HOM")
+        enum_vec.push_back(Location::HUNG_HOM);
+    else if(str=="MEI_FU")
+        enum_vec.push_back(Location::MEI_FU);
+    else if(str=="LAI_CHI_KOK")
+        enum_vec.push_back(Location::LAI_CHI_KOK);
+    else if(str=="SO_UK")
+        enum_vec.push_back(Location::SO_UK);
+    else if(str=="KWUN_TONG")
+        enum_vec.push_back(Location::KWUN_TONG);
+    else if(str=="DIAMOND_HILL")
+        enum_vec.push_back(Location::DIAMOND_HILL);
+    else if(str=="CHEUNG_SHA_WAN")
+        enum_vec.push_back(Location::CHEUNG_SHA_WAN);
+    else if(str=="MA_TAU_WAI")
+        enum_vec.push_back(Location::MA_TAU_WAI);
+    else if(str=="LEI_YUE_MUN")
+        enum_vec.push_back(Location::LEI_YUE_MUN);
+    else if(str=="WHAMPOA")
+        enum_vec.push_back(Location::WHAMPOA);
+    else if(str=="WONG_TAI_SIN")
+        enum_vec.push_back(Location::WONG_TAI_SIN);
+    else if(str=="SHEUNG_WAN")
+        enum_vec.push_back(Location::SHEUNG_WAN);
+    else if(str=="CENTRAL")
+        enum_vec.push_back(Location::CENTRAL);
+    else if(str=="LEI_TUNG")
+        enum_vec.push_back(Location::LEI_TUNG);
+    else if(str=="NORTH_POINT")
+        enum_vec.push_back(Location::NORTH_POINT);
+    else if(str=="MID_LEVELS")
+        enum_vec.push_back(Location::MID_LEVELS);
+    else if(str=="KENNEDY_TOWN")
+        enum_vec.push_back(Location::KENNEDY_TOWN);
+    else if(str=="TAI_HANG")
+        enum_vec.push_back(Location::TAI_HANG);
+    else if(str=="TIN_HAU")
+        enum_vec.push_back(Location::TIN_HAU);
+    else if(str=="TAIKOO_SHING")
+        enum_vec.push_back(Location::TAIKOO_SHING);
+    else if(str=="SIU_SAI_WAN")
+        enum_vec.push_back(Location::SIU_SAI_WAN);
+    else if(str=="HENG_FA_CHUEN")
+        enum_vec.push_back(Location::HENG_FA_CHUEN);
+    else if(str=="SOUTH_HORIZONS")
+        enum_vec.push_back(Location::SOUTH_HORIZONS);
+    else if(str=="DEEP_WATER_BAY")
+        enum_vec.push_back(Location::DEEP_WATER_BAY);
+    else if(str=="REPULSE_BAY")
+        enum_vec.push_back(Location::REPULSE_BAY);
+    else if(str=="WAN_CHAI")
+        enum_vec.push_back(Location::WAN_CHAI);
+    else if(str=="FORTRESS_HILL")
+        enum_vec.push_back(Location::FORTRESS_HILL);
+    else if(str=="TIN_WAN")
+        enum_vec.push_back(Location::TIN_WAN);
+    else if(str=="SHEK_PAI_WAN")
+        enum_vec.push_back(Location::SHEK_PAI_WAN);
+    else if(str=="SHEK_O")
+        enum_vec.push_back(Location::SHEK_O);
+    else if(str=="SHAU_KEI_WAN")
+        enum_vec.push_back(Location::SHAU_KEI_WAN);
+    else if(str=="WAH_FU")
+        enum_vec.push_back(Location::WAH_FU);
+    else if(str=="POK_FU_LAM")
+        enum_vec.push_back(Location::POK_FU_LAM);
+    else if(str=="SAI_WAN_HO")
+        enum_vec.push_back(Location::SAI_WAN_HO);
+    else if(str=="SAI_YING_PUN")
+        enum_vec.push_back(Location::SAI_YING_PUN);
+    else if(str=="SAI_WAN")
+        enum_vec.push_back(Location::SAI_WAN);
+    else if(str=="STANLEY")
+        enum_vec.push_back(Location::STANLEY);
+    else if(str=="HAPPY_VALLEY")
+        enum_vec.push_back(Location::HAPPY_VALLEY);
+    else if(str=="ADMIRALTY")
+        enum_vec.push_back(Location::ADMIRALTY);
+    else if(str=="CAUSEWAY_BAY")
+        enum_vec.push_back(Location::CAUSEWAY_BAY);
+    else if(str=="TELEGRAPH_BAY")
+        enum_vec.push_back(Location::TELEGRAPH_BAY);
+    else if(str=="ABERDEEN")
+        enum_vec.push_back(Location::ABERDEEN);
+    else if(str=="QUARRY_BAY")
+        enum_vec.push_back(Location::QUARRY_BAY);
+    else if(str=="AP_LEI_CHAU")
+        enum_vec.push_back(Location::AP_LEI_CHAU);
+    else if(str=="STAUNTON_VALLEY")
+        enum_vec.push_back(Location::STAUNTON_VALLEY);
+    else{
+        cout<<"Wrong "+enumType<<endl;
+    }
+}
+
 void splitBy(string src, vector<string>&splitedStr,char sep){
     size_t startpos = 0;
     size_t endpos = src.find(sep,startpos);
@@ -196,11 +552,93 @@ void splitBy(string src, vector<string>&splitedStr,char sep){
     splitedStr.push_back(src.substr(startpos,src.size()-startpos));
 }
 
-void matchStudent(map<Student,vector<Tutor>>,const char* line,const vector<Tutor>tutors[][30][150][20]){
+void matchStudent(map<Student,vector<Tutor>>matchList,const char* line,const vector<Tutor>tutors[][30][150][20]){
+    //split the line into data
     string line_s = line;
     vector<string> data;
     splitBy(line_s,data,'\t');
-    Student newStudent();
+
+    //set targetTutorSex
+    vector<Sex> targetTutorSex;
+    if(data[3]=="None"){
+        targetTutorSex.push_back(Sex::M);
+        targetTutorSex.push_back(Sex::F);
+    }
+    else if(data[3]=="M")
+        targetTutorSex.push_back(Sex::M);
+    else if(data[3]=="F")
+        targetTutorSex.push_back(Sex::F);
+    else
+        cout<<"Wrong targetTutorSex."<<endl;
+    
+    //set Student's grade
+    Grade studentGrade;
+    if(data[4]=="P1")
+        studentGrade=Grade::P1;
+    else if(data[4]=="P2")
+        studentGrade=Grade::P2;
+    else if(data[4]=="P3")
+        studentGrade=Grade::P3;
+    else if(data[4]=="P4")
+        studentGrade=Grade::P4;
+    else if(data[4]=="P5")
+        studentGrade=Grade::P5;
+    else if(data[4]=="P6")
+        studentGrade=Grade::P6;
+    else if(data[4]=="S1")
+        studentGrade=Grade::S1;
+    else if(data[4]=="S2")
+        studentGrade=Grade::S2;
+    else if(data[4]=="S3")
+        studentGrade=Grade::S3;
+    else if(data[4]=="S4")
+        studentGrade=Grade::S4;
+    else if(data[4]=="S5")
+        studentGrade=Grade::S5;
+    else if(data[4]=="S6")
+        studentGrade=Grade::S6;
+    else
+        cout<<"Wrong studentGrade."<<endl;
+    
+    //set subjects
+    vector<string>studentSubjects;
+    splitBy(data[5],studentSubjects,',');
+    vector<Subject>enum_studentSubjects;
+    for(int i=0;i<studentSubjects.size();++i){
+        strSubjectToEnumVector(enum_studentSubjects,studentSubjects[i],"studentSubject");
+    }
+
+    //set locations
+    vector<string>studentLocations;
+    splitBy(data[6],studentLocations,',');
+    vector<Location>enum_studentLocations;
+    for(int i=0;i<studentLocations.size();++i){
+        strLocationToEnumVector(enum_studentLocations,studentLocations[i],"studentLocation");
+    }
+    
+    Student newStudent(data[0],
+                        data[1],
+                        data[2],
+                        data[3],
+                        data[4],
+                        data[5],
+                        data[6],
+                        data[7]);
+
+    vector<Tutor>matchedTutors;
+    for(int i=0;i<targetTutorSex.size();++i){
+        for(int j=0;j<studentSubjects.size();++j){
+            for(int k=0;k<studentLocations.size();++k){
+                for(int l=0;l<tutors[i][j][k][(int)studentGrade].size();++l){
+                    matchedTutors.push_back(tutors[i][j][k][(int)studentGrade][l]);
+
+                }
+            }
+        }
+    }
+    if(matchedTutors.size()>0)
+        matchList[newStudent] = matchedTutors;
+    
 }
 
 void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
@@ -216,33 +654,9 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
     vector<string>grades;
     splitBy(data[7],grades,',');
     vector<Grade>enum_grades;
+    cout<<"debug"<<endl;
     for(int i=0;i<grades.size();++i){
-        if(grades[i]=="P1")
-            enum_grades.push_back(Grade::P1);
-        else if(grades[i]=="P2")
-            enum_grades.push_back(Grade::P2);
-        else if(grades[i]=="P3")
-            enum_grades.push_back(Grade::P3);
-        else if(grades[i]=="P4")
-            enum_grades.push_back(Grade::P4);
-        else if(grades[i]=="P5")
-            enum_grades.push_back(Grade::P5);
-        else if(grades[i]=="P6")
-            enum_grades.push_back(Grade::P6);
-        else if(grades[i]=="S1")
-            enum_grades.push_back(Grade::S1);
-        else if(grades[i]=="S2")
-            enum_grades.push_back(Grade::S2);
-        else if(grades[i]=="S3")
-            enum_grades.push_back(Grade::S3);
-        else if(grades[i]=="S4")
-            enum_grades.push_back(Grade::S4);
-        else if(grades[i]=="S5")
-            enum_grades.push_back(Grade::S5);
-        else if(grades[i]=="S6")
-            enum_grades.push_back(Grade::S6);
-        else
-            cout<<"Grades typed wrongly."<<endl;
+        strGradeToEnumVector(enum_grades,grades[i],"targetGrade");
     }
 
     //convert subjects
@@ -250,60 +664,7 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
     splitBy(data[8],subjects,',');
     vector<Subject>enum_subjects;
     for(int i=0;i<subjects.size();++i){
-        if(subjects[i]=="Chin")
-            enum_subjects.push_back(Subject::CHIN);
-        else if(subjects[i]=="Eng")
-            enum_subjects.push_back(Subject::ENG);
-        else if(subjects[i]=="Math_C")
-            enum_subjects.push_back(Subject::MATH_C);
-        else if(subjects[i]=="Math_E")
-            enum_subjects.push_back(Subject::MATH_E);
-        else if(subjects[i]=="M1")
-            enum_subjects.push_back(Subject::M1);
-        else if(subjects[i]=="M2")
-            enum_subjects.push_back(Subject::M2);
-        else if(subjects[i]=="LS_C")
-            enum_subjects.push_back(Subject::LS_C);
-        else if(subjects[i]=="LS_E")
-            enum_subjects.push_back(Subject::LS_E);
-        else if(subjects[i]=="Phys_C")
-            enum_subjects.push_back(Subject::PHYS_C);
-        else if(subjects[i]=="Phys_E")
-            enum_subjects.push_back(Subject::PHYS_E);
-        else if(subjects[i]=="Chem_C")
-            enum_subjects.push_back(Subject::CHEM_C);
-        else if(subjects[i]=="Chem_E")
-            enum_subjects.push_back(Subject::CHEM_E);
-        else if(subjects[i]=="Bio_C")
-            enum_subjects.push_back(Subject::BIO_C);
-        else if(subjects[i]=="Bio_E")
-            enum_subjects.push_back(Subject::BIO_E);
-        else if(subjects[i]=="Geog_C")
-            enum_subjects.push_back(Subject::GEOG_C);
-        else if(subjects[i]=="Geog_E")
-            enum_subjects.push_back(Subject::GEOG_E);
-        else if(subjects[i]=="C_History")
-            enum_subjects.push_back(Subject::C_HISTORY);
-        else if(subjects[i]=="W_History")
-            enum_subjects.push_back(Subject::W_HISTORY);
-        else if(subjects[i]=="ICT")
-            enum_subjects.push_back(Subject::ICT);
-        else if(subjects[i]=="ECON")
-            enum_subjects.push_back(Subject::ECON);
-        else if(subjects[i]=="BAFS")
-            enum_subjects.push_back(Subject::BAFS);
-        else if(subjects[i]=="Account")
-            enum_subjects.push_back(Subject::ACCOUNT);
-        else if(subjects[i]=="IS")
-            enum_subjects.push_back(Subject::IS);
-        else if(subjects[i]=="ChinLit")
-            enum_subjects.push_back(Subject::CHINLIT);
-        else if(subjects[i]=="EngLit")
-            enum_subjects.push_back(Subject::ENGLIT);
-        else if(subjects[i]=="VA")
-            enum_subjects.push_back(Subject::VA);
-        else
-            cout<<"Subjects typed wrongly."<<endl;
+        strSubjectToEnumVector(enum_subjects,subjects[i],"targetSubject");
     }
 
      //convert locations
@@ -311,282 +672,19 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
     splitBy(data[9],locations,',');
     vector<Location>enum_locations;
     for(int i=0;i<locations.size();++i){
-        if(locations[i]=="SHEUNG_SHUI")
-            enum_locations.push_back(Location::SHEUNG_SHUI);
-        else if(locations[i]=="YUEN_LONG")
-            enum_locations.push_back(Location::YUEN_LONG);
-        else if(locations[i]=="SIU_HONG")
-            enum_locations.push_back(Location::SIU_HONG);
-        else if(locations[i]=="LAMMA_ISLAND")
-            enum_locations.push_back(Location::LAMMA_ISLAND);
-        else if(locations[i]=="HANG_HAU")
-            enum_locations.push_back(Location::HANG_HAU);
-        else if(locations[i]=="PENG_CHAU")
-            enum_locations.push_back(Location::PENG_CHAU);
-        else if(locations[i]=="TAI_WAI")
-            enum_locations.push_back(Location::TAI_WAI);
-        else if(locations[i]=="TAI_PO")
-            enum_locations.push_back(Location::TAI_PO);
-        else if(locations[i]=="LANTAU_ISLAND")
-            enum_locations.push_back(Location::LANTAU_ISLAND);
-        else if(locations[i]=="TAI_SHUI_HANG")
-            enum_locations.push_back(Location::TAI_SHUI_HANG);
-        else if(locations[i]=="TAI_WO_HAU")
-            enum_locations.push_back(Location::TAI_WO_HAU);
-        else if(locations[i]=="TIN_SHUI_WAI")
-            enum_locations.push_back(Location::TIN_SHUI_WAI);
-        else if(locations[i]=="TAI_WO")
-            enum_locations.push_back(Location::TAI_WO);
-        else if(locations[i]=="PO_LAM")
-            enum_locations.push_back(Location::PO_LAM);
-        else if(locations[i]=="TSEUNG_KWAN_O")
-            enum_locations.push_back(Location::TSEUNG_KWAN_O);
-        else if(locations[i]=="SIU_LEK_YUEN")
-            enum_locations.push_back(Location::SIU_LEK_YUEN);
-        else if(locations[i]=="TUEN_MUN")
-            enum_locations.push_back(Location::TUEN_MUN);
-        else if(locations[i]=="LOHAS_PARK")
-            enum_locations.push_back(Location::LOHAS_PARK);
-        else if(locations[i]=="HENG_ON")
-            enum_locations.push_back(Location::HENG_ON);
-        else if(locations[i]=="DISCOVERY_BAY")
-            enum_locations.push_back(Location::DISCOVERY_BAY);
-        else if(locations[i]=="TAK_KU_LING")
-            enum_locations.push_back(Location::TAK_KU_LING);
-        else if(locations[i]=="LONG_PING")
-            enum_locations.push_back(Location::LONG_PING);
-        else if(locations[i]=="TUNG_CHUNG")
-            enum_locations.push_back(Location::TUNG_CHUNG);
-        else if(locations[i]=="LEI_MUK_SHUE")
-            enum_locations.push_back(Location::LEI_MUK_SHUE);
-        else if(locations[i]=="SUNNY_BAY")
-            enum_locations.push_back(Location::SUNNY_BAY);
-        else if(locations[i]=="SHA_TIN")
-            enum_locations.push_back(Location::SHA_TIN);
-        else if(locations[i]=="SHA_TIN_WAI")
-            enum_locations.push_back(Location::SHA_TIN_WAI);
-        else if(locations[i]=="SHA_TAU_KOK")
-            enum_locations.push_back(Location::SHA_TAU_KOK);
-        else if(locations[i]=="YAU_TONG")
-            enum_locations.push_back(Location::YAU_TONG);
-        else if(locations[i]=="HUNG_SHUI_KIU")
-            enum_locations.push_back(Location::HUNG_SHUI_KIU);
-        else if(locations[i]=="SHAM_TSENG")
-            enum_locations.push_back(Location::SHAM_TSENG);
-        else if(locations[i]=="CLEAR_WATER_BAY")
-            enum_locations.push_back(Location::CLEAR_WATER_BAY);
-        else if(locations[i]=="FO_TAN")
-            enum_locations.push_back(Location::FO_TAN);
-        else if(locations[i]=="WU_KAI_SHA")
-            enum_locations.push_back(Location::WU_KAI_SHA);
-        else if(locations[i]=="SHEK_LEI")
-            enum_locations.push_back(Location::SHEK_LEI);
-        else if(locations[i]=="SHEK_YAM")
-            enum_locations.push_back(Location::SHEK_YAM);
-        else if(locations[i]=="WO_CHE")
-            enum_locations.push_back(Location::WO_CHE);
-        else if(locations[i]=="CITY_ONE")
-            enum_locations.push_back(Location::CITY_ONE);
-        else if(locations[i]=="FANLING")
-            enum_locations.push_back(Location::FANLING);
-        else if(locations[i]=="TSUEN_WAN")
-            enum_locations.push_back(Location::TSUEN_WAN);
-        else if(locations[i]=="LAI_KING")
-            enum_locations.push_back(Location::LAI_KING);
-        else if(locations[i]=="KWAI_CHUNG")
-            enum_locations.push_back(Location::KWAI_CHUNG);
-        else if(locations[i]=="KWAI_SHING")
-            enum_locations.push_back(Location::KWAI_SHING);
-        else if(locations[i]=="KWAI_HING")
-            enum_locations.push_back(Location::KWAI_HING);
-        else if(locations[i]=="KWAI_FONG")
-            enum_locations.push_back(Location::KWAI_FONG);
-        else if(locations[i]=="LAM_TIN")
-            enum_locations.push_back(Location::LAM_TIN);
-        else if(locations[i]=="SAI_KUNG")
-            enum_locations.push_back(Location::SAI_KUNG);
-        else if(locations[i]=="TIU_KING_LING")
-            enum_locations.push_back(Location::TIU_KING_LING);
-        else if(locations[i]=="CHE_KUNG_MIU")
-            enum_locations.push_back(Location::CHE_KUNG_MIU);
-        else if(locations[i]=="KAM_SHEUNG_ROAD")
-            enum_locations.push_back(Location::KAM_SHEUNG_ROAD);
-        else if(locations[i]=="CHEUNG_CHAU")
-            enum_locations.push_back(Location::CHEUNG_CHAU);
-        else if(locations[i]=="TSING_YI")
-            enum_locations.push_back(Location::TSING_YI);
-        else if(locations[i]=="TSING_LUNG_TAU")
-            enum_locations.push_back(Location::TSING_LUNG_TAU);
-        else if(locations[i]=="HIN_KENG")
-            enum_locations.push_back(Location::HIN_KENG);
-        else if(locations[i]=="MA_LIU_SHUI")
-            enum_locations.push_back(Location::MA_LIU_SHUI);
-        else if(locations[i]=="MA_WAN")
-            enum_locations.push_back(Location::MA_WAN);
-        else if(locations[i]=="MA_ON_SHAN")
-            enum_locations.push_back(Location::MA_ON_SHAN);
-        else if(locations[i]=="KOWLOON_CITY")
-            enum_locations.push_back(Location::KOWLOON_CITY);
-        else if(locations[i]=="KOWLOON_TONG")
-            enum_locations.push_back(Location::KOWLOON_TONG);
-        else if(locations[i]=="KOWLOON_BAY")
-            enum_locations.push_back(Location::KOWLOON_BAY);
-        else if(locations[i]=="JORDAN")
-            enum_locations.push_back(Location::JORDAN);
-        else if(locations[i]=="HO_MAN_TIN")
-            enum_locations.push_back(Location::HO_MAN_TIN);
-        else if(locations[i]=="NAM_CHEONG")
-            enum_locations.push_back(Location::NAM_CHEONG);
-        else if(locations[i]=="YAU_YAT_TSUEN")
-            enum_locations.push_back(Location::YAU_YAT_TSUEN);
-        else if(locations[i]=="KAI_TAK")
-            enum_locations.push_back(Location::KAI_TAK);
-        else if(locations[i]=="TO_KWA_WAN")
-            enum_locations.push_back(Location::TO_KWA_WAN);
-        else if(locations[i]=="TAI_WO_PING")
-            enum_locations.push_back(Location::TAI_WO_PING);
-        else if(locations[i]=="TAI_KOK_TSUI")
-            enum_locations.push_back(Location::TAI_KOK_TSUI);
-        else if(locations[i]=="PRINCE_EDWARD")
-            enum_locations.push_back(Location::PRINCE_EDWARD);
-        else if(locations[i]=="OLYMPIC")
-            enum_locations.push_back(Location::OLYMPIC);
-        else if(locations[i]=="TSIM_SHA_TSUI")
-            enum_locations.push_back(Location::TSIM_SHA_TSUI);
-        else if(locations[i]=="CHOI_HUNG")
-            enum_locations.push_back(Location::CHOI_HUNG);
-        else if(locations[i]=="TSZ_WAN_SHAN")
-            enum_locations.push_back(Location::TSZ_WAN_SHAN);
-        else if(locations[i]=="HAMMER_HILL")
-            enum_locations.push_back(Location::HAMMER_HILL);
-        else if(locations[i]=="SAN_PO_KONG")
-            enum_locations.push_back(Location::SAN_PO_KONG);
-        else if(locations[i]=="MONG_KOK")
-            enum_locations.push_back(Location::MONG_KOK);
-        else if(locations[i]=="AUSTIN")
-            enum_locations.push_back(Location::AUSTIN);
-        else if(locations[i]=="LOK_FU")
-            enum_locations.push_back(Location::LOK_FU);
-        else if(locations[i]=="WANG_TAU_HOM")
-            enum_locations.push_back(Location::WANG_TAU_HOM);
-        else if(locations[i]=="YAU_MA_TEI")
-            enum_locations.push_back(Location::YAU_MA_TEI);
-        else if(locations[i]=="SHAM_SHUI_PO")
-            enum_locations.push_back(Location::SHAM_SHUI_PO);
-        else if(locations[i]=="NGAU_CHI_WAN")
-            enum_locations.push_back(Location::NGAU_CHI_WAN);
-        else if(locations[i]=="NGAU_TAU_KOK")
-            enum_locations.push_back(Location::NGAU_TAU_KOK);
-        else if(locations[i]=="SHEK_KIP_MEI")
-            enum_locations.push_back(Location::SHEK_KIP_MEI);
-        else if(locations[i]=="SAU_MAU_PING")
-            enum_locations.push_back(Location::SAU_MAU_PING);
-        else if(locations[i]=="CHUK_YUEN")
-            enum_locations.push_back(Location::CHUK_YUEN);
-        else if(locations[i]=="HUNG_HOM")
-            enum_locations.push_back(Location::HUNG_HOM);
-        else if(locations[i]=="MEI_FU")
-            enum_locations.push_back(Location::MEI_FU);
-        else if(locations[i]=="LAI_CHI_KOK")
-            enum_locations.push_back(Location::LAI_CHI_KOK);
-        else if(locations[i]=="SO_UK")
-            enum_locations.push_back(Location::SO_UK);
-        else if(locations[i]=="KWUN_TONG")
-            enum_locations.push_back(Location::KWUN_TONG);
-        else if(locations[i]=="DIAMOND_HILL")
-            enum_locations.push_back(Location::DIAMOND_HILL);
-        else if(locations[i]=="CHEUNG_SHA_WAN")
-            enum_locations.push_back(Location::CHEUNG_SHA_WAN);
-        else if(locations[i]=="MA_TAU_WAI")
-            enum_locations.push_back(Location::MA_TAU_WAI);
-        else if(locations[i]=="LEI_YUE_MUN")
-            enum_locations.push_back(Location::LEI_YUE_MUN);
-        else if(locations[i]=="WHAMPOA")
-            enum_locations.push_back(Location::WHAMPOA);
-        else if(locations[i]=="WONG_TAI_SIN")
-            enum_locations.push_back(Location::WONG_TAI_SIN);
-        else if(locations[i]=="SHEUNG_WAN")
-            enum_locations.push_back(Location::SHEUNG_WAN);
-        else if(locations[i]=="CENTRAL")
-            enum_locations.push_back(Location::CENTRAL);
-        else if(locations[i]=="LEI_TUNG")
-            enum_locations.push_back(Location::LEI_TUNG);
-        else if(locations[i]=="NORTH_POINT")
-            enum_locations.push_back(Location::NORTH_POINT);
-        else if(locations[i]=="MID_LEVELS")
-            enum_locations.push_back(Location::MID_LEVELS);
-        else if(locations[i]=="KENNEDY_TOWN")
-            enum_locations.push_back(Location::KENNEDY_TOWN);
-        else if(locations[i]=="TAI_HANG")
-            enum_locations.push_back(Location::TAI_HANG);
-        else if(locations[i]=="TIN_HAU")
-            enum_locations.push_back(Location::TIN_HAU);
-        else if(locations[i]=="TAIKOO_SHING")
-            enum_locations.push_back(Location::TAIKOO_SHING);
-        else if(locations[i]=="SIU_SAI_WAN")
-            enum_locations.push_back(Location::SIU_SAI_WAN);
-        else if(locations[i]=="HENG_FA_CHUEN")
-            enum_locations.push_back(Location::HENG_FA_CHUEN);
-        else if(locations[i]=="SOUTH_HORIZONS")
-            enum_locations.push_back(Location::SOUTH_HORIZONS);
-        else if(locations[i]=="DEEP_WATER_BAY")
-            enum_locations.push_back(Location::DEEP_WATER_BAY);
-        else if(locations[i]=="REPULSE_BAY")
-            enum_locations.push_back(Location::REPULSE_BAY);
-        else if(locations[i]=="WAN_CHAI")
-            enum_locations.push_back(Location::WAN_CHAI);
-        else if(locations[i]=="FORTRESS_HILL")
-            enum_locations.push_back(Location::FORTRESS_HILL);
-        else if(locations[i]=="TIN_WAN")
-            enum_locations.push_back(Location::TIN_WAN);
-        else if(locations[i]=="SHEK_PAI_WAN")
-            enum_locations.push_back(Location::SHEK_PAI_WAN);
-        else if(locations[i]=="SHEK_O")
-            enum_locations.push_back(Location::SHEK_O);
-        else if(locations[i]=="SHAU_KEI_WAN")
-            enum_locations.push_back(Location::SHAU_KEI_WAN);
-        else if(locations[i]=="WAH_FU")
-            enum_locations.push_back(Location::WAH_FU);
-        else if(locations[i]=="POK_FU_LAM")
-            enum_locations.push_back(Location::POK_FU_LAM);
-        else if(locations[i]=="SAI_WAN_HO")
-            enum_locations.push_back(Location::SAI_WAN_HO);
-        else if(locations[i]=="SAI_YING_PUN")
-            enum_locations.push_back(Location::SAI_YING_PUN);
-        else if(locations[i]=="SAI_WAN")
-            enum_locations.push_back(Location::SAI_WAN);
-        else if(locations[i]=="STANLEY")
-            enum_locations.push_back(Location::STANLEY);
-        else if(locations[i]=="HAPPY_VALLEY")
-            enum_locations.push_back(Location::HAPPY_VALLEY);
-        else if(locations[i]=="ADMIRALTY")
-            enum_locations.push_back(Location::ADMIRALTY);
-        else if(locations[i]=="CAUSEWAY_BAY")
-            enum_locations.push_back(Location::CAUSEWAY_BAY);
-        else if(locations[i]=="TELEGRAPH_BAY")
-            enum_locations.push_back(Location::TELEGRAPH_BAY);
-        else if(locations[i]=="ABERDEEN")
-            enum_locations.push_back(Location::ABERDEEN);
-        else if(locations[i]=="QUARRY_BAY")
-            enum_locations.push_back(Location::QUARRY_BAY);
-        else if(locations[i]=="AP_LEI_CHAU")
-            enum_locations.push_back(Location::AP_LEI_CHAU);
-        else if(locations[i]=="STAUNTON_VALLEY")
-            enum_locations.push_back(Location::STAUNTON_VALLEY);
-        else
-            cout<<"Locations typed wrongly."<<endl;
+        strLocationToEnumVector(enum_locations,locations[i],"tutorLocation");
     }
 
-    Tutor newTutor(stoi(data[0]),
+    Tutor newTutor(data[0],
                     data[1],
-                    sex,
+                    data[2],
                     data[3],
                     data[4],
                     data[5],
                     data[6],
-                    enum_grades,
-                    enum_subjects,
-                    enum_locations,
+                    data[7],
+                    data[8],
+                    data[9],
                     data[10]);
     
     for(int i=0;i<subjects.size();++i){
@@ -600,7 +698,6 @@ void addTutor(vector<Tutor> tutors[][30][150][20],const char* line){
 
 int main(){
     vector<Tutor> tutors[2][30][150][20];
-    vector<Student> students[2][30][150][20];
     ifstream ifsTutors("tutor_info.txt");
     ifstream ifsStudents("student_info.txt");
     map<Student,vector<Tutor>> matchList;
@@ -613,11 +710,23 @@ int main(){
         addTutor(tutors,line); 
     }
 
+    int numStudent=0;
     ifsStudents.getline(line,1024,'\n');
-    for(;!ifsStudents.eof();){
+    for(;!ifsStudents.eof();++numStudent){
         ifsStudents.getline(line,1024,'\n');
         matchStudent(matchList,line,tutors);
     }
-
+    
+    for(map<Student,vector<Tutor>>::const_iterator it=matchList.begin();it!=matchList.end();++it){
+        cout<<"*****Matched Student: *****"<<endl;
+        it->first.print();
+        cout<<"*****Matched Tutors: *****"<<endl;
+        for(int i=0;i<it->second.size();++i)
+            it->second[i].print();
+        cout<<endl;
+    }
+    cout<<"debug"<<endl;
+    ifsStudents.close();
+    ifsTutors.close();
     return 0;
 }
