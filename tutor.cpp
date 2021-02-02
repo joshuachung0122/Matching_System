@@ -23,6 +23,8 @@ Tutor::Tutor(string number,
                 locations(locations),
                 aimedSalary(aimedSalary){}
 
+
+
 void Tutor::print()const{
     cout<<number<<'\t'
         <<name<<'\t'

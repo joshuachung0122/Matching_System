@@ -36,6 +36,7 @@ class Tutor{
             string subjects,
             string locations,
             string aimedSalary);
+
         
         void print()const;
 };
