@@ -544,11 +544,11 @@ using namespace std;
 
 void splitBy(string src, vector<string>&splitedStr,char sep){
     size_t startpos = 0;
-    size_t endpos = src.find(sep,startpos);
-    while(endpos!=string::npos){
+    size_t endpos = min(src.find(sep, startpos), src.find(' ', startpos));
+    while(src.find(sep,startpos)!=string::npos){
         splitedStr.push_back(src.substr(startpos,endpos-startpos));
-        startpos = endpos+1;
-        endpos = src.find(sep,startpos);
+        startpos = src.find(sep, startpos)+1;
+        endpos = min(src.find(sep,startpos),src.find(' ',startpos));
     }
     splitedStr.push_back(src.substr(startpos,src.size()-startpos));
 }
