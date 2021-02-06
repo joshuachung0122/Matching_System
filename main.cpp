@@ -672,5 +672,9 @@ int main(){
     }
     ifsStudents.close();
     ifsTutors.close();
+
+    cout<<"Please enter anything to exit: ";
+    int x;
+    cin>>x;
     return 0;
 }
