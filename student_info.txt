@@ -1,2 +1,3 @@
 No.	Name	Sex	TutorSex	Grade	Subjects	Location	Fee
 1	SA	M	M,F	S4	Math_E	TIN_SHUI_WAI,YUEN_LONG	150    
+2	Fuck	F	M,F	S4	Chem_C	TIN_SHUI_WAI	160	
