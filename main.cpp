@@ -544,11 +544,13 @@ using namespace std;
 
 void splitBy(string src, vector<string>&splitedStr,char sep){
     size_t startpos = 0;
-    size_t endpos = min(src.find(sep, startpos), src.find(' ', startpos));
-    while(src.find(sep,startpos)!=string::npos){
+    size_t endpos = src.find(sep, startpos);
+    while(endpos!=string::npos){
         splitedStr.push_back(src.substr(startpos,endpos-startpos));
-        startpos = src.find(sep, startpos)+1;
-        endpos = min(src.find(sep,startpos),src.find(' ',startpos));
+        startpos = endpos+1;
+        while(src[startpos]==sep)
+            ++startpos;
+        endpos = src.find(sep,startpos);
     }
     splitedStr.push_back(src.substr(startpos,src.size()-startpos));
 }
@@ -557,7 +559,7 @@ void matchStudent(map<Student,vector<Tutor>>&matchList,const char* line, map<str
     //split the line into data
     string line_s = line;
     vector<string> data;
-    splitBy(line_s,data,'\t');
+    splitBy(line_s,data,' ');
 
     //***set targetTutorSex***//
     vector<string> targetTutorSex;
@@ -602,7 +604,7 @@ void matchStudent(map<Student,vector<Tutor>>&matchList,const char* line, map<str
 void addTutor(map<string, map<string, map<string, map<string, vector<Tutor>>>>>&tutors,const char* line){
     string line_s = line;
     vector<string> data;
-    splitBy(line_s,data,'\t');
+    splitBy(line_s,data,' ');
     //***convert data from string to specific types***//
     //convert sex
     string sex = data[2];
